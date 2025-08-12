@@ -313,8 +313,9 @@ color: #434455;
         url('../images/hero-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 320px;
+    max-width: 320px;
     background-position: center;
+    margin: 0 auto;
 }
 .head-h {
     display: flex;
