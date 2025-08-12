@@ -69,7 +69,7 @@ button {
     --dairy: #fcfcfc;
 }
 
-/*header*/
+/*header section*/
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
@@ -315,7 +315,6 @@ color: #434455;
     background-size: cover;
     width: 320px;
     background-position: center;
-    margin: 0 auto;
 }
 .head-h {
     display: flex;
@@ -354,7 +353,7 @@ color: #434455;
 }
 @media screen and (min-width: 768px) {
    .section-color {
-    width: 768px;
+    max-width: 768px;
     padding: 112px 0;
   } 
    .head-h {
@@ -366,9 +365,9 @@ color: #434455;
 }
 @media screen and (min-width: 1158px) {
     .section-color {
-    padding: 188px 0;
-    background-color:#2e2f42;
-    width: 1440px;
+        max-width: 1440px;
+        padding: 188px 0;
+        background-color:#2e2f42;
   }
 
 .head-h {
@@ -389,8 +388,7 @@ color: #434455;
         cursor: pointer;
         border-radius: 4px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-       
-  }
+       }
 .button:hover,
 .button:focus  {
     background-color: #404BBF;
@@ -406,7 +404,6 @@ color: #434455;
   padding: 96px 0;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     gap: 72px;
 }
 
@@ -430,8 +427,7 @@ color: #434455;
   .head-list {
     text-align: start;
   }
-   .text-list {     
-      width: 100%;   
+   .text-list {       
       gap: 72px 24px;
   }
     .text-section-two {
@@ -442,15 +438,12 @@ color: #434455;
 @media screen and (min-width: 1158px) {
     .text-list {
       min-width: 1128px;
-      height: 100%;
       flex-wrap: nowrap;
       gap: 24px;
       padding: 120px 0;
       
   }
-    .list-c {
-     width: 100%;  
-  }
+  
     .icon-hero {
     display: flex;
     align-items: center;
@@ -828,7 +821,7 @@ input::placeholder {
     left:50%;
     background-color: var(--dairy);
     border-radius: 4px;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     width: 288px;
     min-height: 623px;
@@ -891,14 +884,12 @@ input::placeholder {
 .check-icon {
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center; 
-    justify-content:center;
     fill: transparent;
-    margin-right: 8px;
+    cursor: pointer;
 }
 .information {
     font-size: 12px;
@@ -907,6 +898,8 @@ input::placeholder {
     color: var(--light-slate);
     display: block;
     margin-bottom: 4px;
+    gap: 8px;
+    align-items: center;
 }
 .name-cont {
     position: relative;
@@ -979,7 +972,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (min-width: 768px){
   .footer-page {
  padding: 96px 0;
- width: 768px;
  margin: 0 auto;
 }
 .container-foot {
@@ -1027,8 +1019,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .footer-page {
   background-color: #2e2f42;
   padding: 100px 0;
-  width: 1440px;
-  margin: 0 auto;
   }
 .footer-page .container-foot {
   gap: 0;
@@ -1107,10 +1097,12 @@ input::placeholder {
   }
 .button-foot-svg {
      margin-left: 16px;
-
   }
 }
 .icon-team-mobile {
   width: 24px;
   height: 24px;
+}
+.info-labl {
+  display: flex;
 }
